@@ -5,6 +5,7 @@
 #include <time.h>
 
 #define SIZE 10
+#define ALPHA 26
 
 int main(void)
 {
@@ -22,32 +23,35 @@ int main(void)
 
 	i = 0;
 	j = 0;
-
-	while (1) {
+ 	
+	while(1) {
 		move = rand() % 4;
-		rand_letter = (rand() % (26 + 1 - 0) + 0) + 'A';
-		
-		switch (move) {
-			case 0:
-				array[i][j-1] = rand_letter;
-				break;
-			case 1:
-				array[i+1][j] = rand_letter;
-				break;
-			case 2: 
-				array[i][j+1] = rand_letter;
-				break;
-			case 3: array[i-1][j] = rand_letter;
-				break;
+		rand_letter = (rand() % (ALPHA + 1 - 0) + 0) + 'A';
+		if (move == 0) {	
+			array[i][j-1] = rand_letter;
+			break;
+		}else if(move == 1) {	
+			array[i+1][j] = rand_letter;
+			break;
+		}else if(move == 2) {	
+			array[i][j+1] = rand_letter;
+			break;
+		}else if(move == 3) {	
+			array[i-1][j] = rand_letter;
+			break;
+		}else {
+			break;
 		}
 	}
-
 	for (i = 0; i < SIZE; i++) {
 		for (j = 0; j < SIZE; j++) {
 			printf("%c", array[i][j]);	
 		}
 		printf("\n");
 	}
+
+	printf("%d\n", move);
+	printf("%c\n", rand_letter);
 
 	return 0;
 }
