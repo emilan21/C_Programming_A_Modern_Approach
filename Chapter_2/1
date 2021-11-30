@@ -1,0 +1,15 @@
+// Name: p7.c
+// Purpose: Compute the smalles number of $20, $10, $5, and $1 bills for a given amount.
+// Author: EM
+
+#include <stdio.h>
+
+int main(void)
+{
+        int amount = 0;
+
+        printf("Enter a dollar amount: ");
+        scanf("%d", &amount);
+
+        return 0;
+}
