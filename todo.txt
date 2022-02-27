@@ -1,3 +1,7 @@
 - Chapter 6
 	* Project 11
 	* Project 12
+- Chapter 7
+    * Project 12
+    * Project 14
+    * Project 15
