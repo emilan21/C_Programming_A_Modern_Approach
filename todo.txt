@@ -5,3 +5,5 @@
     * Project 12
     * Project 14
     * Project 15
+- Chapter 8
+    * Project 17
