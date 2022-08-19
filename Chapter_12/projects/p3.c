@@ -1,5 +1,5 @@
-// Name: p1.c
-// Purpose: Reverse message
+// Name: p3.c
+// Purpose: Reverse message - simplfied array pointers
 // Author: EM
 
 #include <stdio.h>
@@ -9,13 +9,11 @@
 int main(void)
 {
         char a[N] = {'\0'};
-        char *p = NULL;
-        int i = 0;
+        char *p = a;
 
         printf("Enter a message: ");
-        while ((p = getchar()) != '\n') {
-            a[i] = p;
-            i++;
+        while ((*p = getchar()) != '\n') {
+            p++;
         }
 
         printf("Reversal is: ");
