@@ -1,6 +1,6 @@
 CFLAGS=-Wall -g
 
-all: p1 p2 p3 p4 p5
+all: p1 p2 p3 p4 p5 p6
 
 clean:
 	rm -f p1
@@ -8,3 +8,4 @@ clean:
 	rm -f p3
 	rm -f p4
 	rm -f p5
+	rm -f p6
