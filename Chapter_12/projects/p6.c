@@ -36,7 +36,7 @@ quicksort(int *low, int *high)
 {
     int *middle;
 
-    if (*low >= *high) {
+    if (low >= high) {
         return;
     }
     middle = split(low, high);
@@ -50,23 +50,23 @@ int
     int part_element = *low;
 
     for (;;) {
-        while (*low < *high && part_element <= *high) {
-            *high--;
+        while (low < high && part_element <= *high) {
+            high -= 1;
         }
-        if (*low >= *high) {
+        if (low >= high) {
             break;
         }
-        *low += 1;
-        *low = *high;
+        //low += 1;
+        *low++ = *high;
 
-        while (*low < *high && *low <= part_element) {
-            *low++;
+        while (low < high && *low <= part_element) {
+            low += 1;
         }
-        if (*low >= *high) {
+        if (low >= high) {
             break;
         }
-        *high -= 1;
-        *high = *low;
+        //high -= 1;
+        *high-- = *low;
     }
 
     *high = part_element;
