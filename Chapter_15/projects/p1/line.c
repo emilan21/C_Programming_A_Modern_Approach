@@ -45,6 +45,7 @@ void write_line(void)
             putchar(line[i]);
         } else {
             spaces_to_insert = extra_spaces / (num_words - 1);
+            //spaces_to_insert = extra_spaces / 3;
             for (j = 1; j <= spaces_to_insert + 1; j++) {
                 putchar(' ');
             }

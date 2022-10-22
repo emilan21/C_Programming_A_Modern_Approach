@@ -5,14 +5,14 @@ OBJFILES = justify.o word.o line.o
 TARGET = justify
 
 $(TARGET): $(OBJFILES)
-	gcc -o justify $(OBJFILES)
+	$(CC) $(CFLAGS) -o justify $(OBJFILES)
 
 justify.o: justify.c word.h line.h
-	gcc -c justify.c
+	$(CC) $(CFLAGS) -c justify.c
 word.o: word.c word.h
-	gcc -c word.c
+	$(CC) $(CFLAGS) -c word.c
 line.o: line.c line.h
-	gcc -c line.c
+	$(CC) $(CFLAGS) -c line.c
 
 clean:
 	rm -f $(OBJFILES) $(TARGET) *~ 
